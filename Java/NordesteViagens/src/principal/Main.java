@@ -1,9 +1,11 @@
 package principal;
 
 import java.sql.*;
+
+import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -14,12 +16,13 @@ public class Main {
 
         try {
             Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
-
+            
+            
             while (true) {
-                System.out.println("Escolha uma opção e Aperte Enter.");
+                System.out.println("Escolha uma opção e Pressione Enter.");
                 System.out.println("Digite 1 Para == Cliente ==");
-                System.out.println("Digite 2 Para == Passagem ==");
-                System.out.println("Digite 3 Para == Destino ==");
+                System.out.println("Digite 2 Para == Destino ==");
+                System.out.println("Digite 3 Para == Passagem ==");
                 System.out.println("Digite 0 Para  == Sair ==");
 
                 int choice = scanner.nextInt();
